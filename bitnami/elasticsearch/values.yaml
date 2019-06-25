@@ -63,7 +63,7 @@ name: elastic
 ##
 master:
   name: master
-  replicas: 2
+  replicas: 1
   heapSize: 128m
   antiAffinity: "soft"
   ## Node Affinity
@@ -129,7 +129,7 @@ securityContext:
 ##
 coordinating:
   name: coordinating-only
-  replicas: 2
+  replicas: 0
   heapSize: 128m
   antiAffinity: "soft"
   ## node affinity
@@ -182,7 +182,7 @@ coordinating:
 ##
 data:
   name: data
-  replicas: 2
+  replicas: 1
   ## updateStrategy for ElasticSearch Data statefulset
   ## ref: https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/#update-strategies
   updateStrategy:
